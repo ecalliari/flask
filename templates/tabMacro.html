@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<style>
+    /* Aqui você pode definir os estilos CSS para a sua tabela */
+    table {
+        border-collapse: collapse;
+        width: 60%; /* Você pode ajustar a largura da tabela */
+        margin: auto; /* Isso alinha a tabela ao centro */
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+    }
+    div p {
+        text-align: center;
+    }
+</style>
+
+<div>
+   <p>RESULTADO DA PESQUISA</p>
+  {{ table | safe }}
+</div>
+
+</body>
+</html>

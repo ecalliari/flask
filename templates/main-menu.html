@@ -1,0 +1,70 @@
+<style>
+    ul {
+        list-style-type: none;
+        display: flex
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        text-decoration: none;
+
+    }
+    
+    li a:hover {
+        color: #111111;
+    }
+
+    .menu-selected {
+        background-color: red
+    }
+    .menu-a {
+        color: black
+    }
+</style>
+
+<ul>
+    <li><a class="menu-a" href="home">Home</a></li>
+    <li><a class="menu-a"  href="services">Produtos e Serviços</a></li>
+    <li><a class="menu-a"  href="cases">Cases</a></li>
+    <li><a class="menu-a"  href="projects">Projetos</a></li>
+    <li><a class="menu-a"  href="about">Quem Somos</a></li>
+    <li><a class="menu-a" href="contact">Contato</a></li>
+</ul>
+
+
+<script>
+
+  
+    $(".menu-a").each(function() {
+        selected =  '{{path}}' == $(this).attr("href")
+        if (selected) {
+            //$( this ).addClass("menu-selected")
+            $( this ).css(
+                    {
+                        "background": "#257CB2",
+                        "color" : "white"
+                    }
+                )
+        }
+        else {
+            //$( this ).removeClass("menu-selected")
+            $( this ).css(
+                {
+                    "background": "white",
+                    "color" : "black"
+                }
+            )
+
+        }
+    })
+
+</script>
+    
+

@@ -1,0 +1,99 @@
+<div>
+  {% include 'options.html' %}
+</div>
+
+<style>
+  /* Style the form elements */
+h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+form input, form textarea {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+form input[type="submit"] {
+  background-color: #00a0d2;
+  color: white;
+  margin-left: 110px;
+}
+
+/* Style the error messages */
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* Style the flash messages */
+.flashes {
+  list-style: none;
+  padding: 0;
+}
+
+.flashes li {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+</style>
+
+{% block content %}
+<h2>Entre em contato</h2>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<form action="{{ url_for('contact') }}" method="POST">
+  {{ form.hidden_tag() }}
+  <div>
+    {{ form.name.label }}
+    {{ form.name }}
+    {% for error in form.name.errors %}
+      <span class="error">{{ error }}</span>
+    {% endfor %}
+  </div>
+  <div>
+    {{ form.email.label }}
+    {{ form.email }}
+    {% for error in form.email.errors %}
+      <span class="error">{{ error }}</span>
+    {% endfor %}
+  </div>
+  <div>
+    {{ form.message.label }}
+    {{ form.message }}
+    {% for error in form.message.errors %}
+      <span class="error">{{ error }}</span>
+    {% endfor %}
+  </div>
+  <div>
+    {{ form.submit }}
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+    #ladoalado {
+        margin-top: 7%;
+        display: flex; /* coloca as imagens uma ao lado da outra */
+        justify-content: center; /* alinha as imagens no centro da tela */
+        align-items: center; /* alinha as imagens na vertical */
+      }
+      
+      #ladoalado img {
+        margin: 10px; /* adiciona uma margem entre as imagens */
+        max-width: 50%; /* limita a largura das imagens para metade da div */
+        height: auto; /* ajusta a altura das imagens proporcionalmente */
+        padding: 5%;
+      }
+</style>
+    
+    <body>
+        <div>
+            {% include 'options.html' %}
+        </div>
+        
+        <div id="ladoalado">
+            <img src="{{ url_for('static', filename='Logotipo_Atlas_BRANCO.png') }}" alt="User Image">
+            <img src="{{ url_for('static', filename='viapol.png') }}" alt="User Image">
+        </div>
+
+    </body>
+</html>

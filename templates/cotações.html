@@ -1,0 +1,36 @@
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    }
+  form input {
+    margin: 10px;
+    padding: 5px;
+  }
+</style>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<div>
+    {% include 'options.html' %}
+</div>
+
+<form method="GET">
+    <select name="comp_select">
+      {% for fruit in fruits %}
+        <option value="{{ fruit }}">{{ fruit }}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" value="Enviar">
+</form>
+
+<div>
+  {% include 'tabMacro.html' %}
+</div>
+
+
+
+

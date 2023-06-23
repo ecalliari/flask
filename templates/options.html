@@ -1,0 +1,116 @@
+<!--https://alvarotrigo.com/blog/website-footers/-->
+
+<style>
+    body{
+        margin:0;
+        overflow-x:hidden;
+        }
+        
+        .footer{
+        margin-left: 5%;
+        width:90%;
+        justify-content: center;
+        align-items: center;
+        background:#2677ac;
+        font-family: 'Play', sans-serif;
+        text-align:center;
+        background: rgba(211,230,235,1);
+        background: -moz-linear-gradient(top, rgba(211,230,235,1) 0%, rgba(117,189,209,1) 57%, rgba(73,165,191,1) 88%, rgba(73,165,191,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,230,235,1)), color-stop(57%, rgba(117,189,209,1)), color-stop(88%, rgba(73,165,191,1)), color-stop(100%, rgba(73,165,191,1)));
+        background: -webkit-linear-gradient(top, rgba(211,230,235,1) 0%, rgba(117,189,209,1) 57%, rgba(73,165,191,1) 88%, rgba(73,165,191,1) 100%);
+        background: -o-linear-gradient(top, rgba(211,230,235,1) 0%, rgba(117,189,209,1) 57%, rgba(73,165,191,1) 88%, rgba(73,165,191,1) 100%);
+        background: -ms-linear-gradient(top, rgba(211,230,235,1) 0%, rgba(117,189,209,1) 57%, rgba(73,165,191,1) 88%, rgba(73,165,191,1) 100%);
+        background: linear-gradient(to bottom, rgba(211,230,235,1) 0%, rgba(117,189,209,1) 57%, rgba(73,165,191,1) 88%, rgba(73,165,191,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3e6eb', endColorstr='#49a5bf', GradientType=0 );
+        
+        border-radius: 23px 23px 23px 23px;
+        -moz-border-radius: 23px 23px 23px 23px;
+        -webkit-border-radius: 23px 23px 23px 23px;
+        border: 0px solid #000000;
+        
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+
+        }
+        
+        .footer .row{
+        width:90%;
+        margin:1% 0%;
+        padding:0.6% 0%;
+        font-size:0.8em;
+
+        }
+        
+        .footer .row a{
+        text-decoration:none;
+        color:white;
+        transition:0.5s;
+        
+        font-size: 12px;
+        
+        }
+        
+        .footer .row a:hover{
+        color:black;
+        
+        
+
+        }
+        
+        .footer .row ul{
+        width:100%;
+        }
+        
+        .footer .row ul li{
+        display:inline-block;
+        margin:0px 30px;
+        }
+        
+        .footer .row a i{
+        font-size:2em;
+        margin:0% 1%;
+        }
+        
+        @media (max-width:720px){
+        .footer{
+        text-align:left;
+        padding:5%;
+        }
+        .footer .row ul li{
+        display:block;
+        margin:10px 0px;
+        text-align:left;
+        }
+        .footer .row a i{
+        margin:0% 3%;
+        }
+        }
+
+</style>
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<footer>
+<div class="footer">
+<div class="row">
+    <img style='width:50px; height: 50px;' src="{{ url_for('static', filename='negocios.png') }}" alt="User Image">
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/repre">Representadas</a></li>
+        <li><a href="/cases">Cases</a></li>
+        <li><a href="/tabela">Tabela</a></li>
+        <li><a href="/geo">Tabela Geo</a></li>
+        <li><a href="/contact">Contato</a></li>
+        <li><a href="/cotacoes">Cotações</a></li>
+    </ul>
+</div>
+
+
+
+</footer>

@@ -1,0 +1,23 @@
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form input {
+    width: 600px;
+    margin: 10px;
+  }
+</style>
+
+
+<div>
+    <form action="/filter" method="POST">
+        <label for="nombre">Razão:</label>
+        <input type="text" id="nombre" name="nombre">
+        <label for="apellido">Cidade:</label>
+        <input type="text" id="apellido" name="apellido">
+        <button type="submit">Enviar</button>
+      </form>
+</div>
